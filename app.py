@@ -88,11 +88,6 @@ def ai_training():
     return render_template("genai_training.html")
 
 
-@app.route("/google9b3521437778edab.html")
-def google_verification():
-    return "google-site-verification: google9b3521437778edab.html"
-
-
 # Legacy redirect — keep old URL working
 @app.route("/women-ai-training")
 def women_ai_training():
