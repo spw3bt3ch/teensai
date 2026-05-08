@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Summer Training for Teens | Level Up With AI</title>
+    <meta name="description" content="A practical AI training experience designed to help teenagers explore artificial intelligence, creativity, automation, and future technology skills.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ai_training.css') }}">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fa-solid fa-microchip"></i>
+                AI <span>Summer</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about">Why This Training</a>
+                <a href="#curriculum">Curriculum</a>
+                <a href="#parents">For Parents</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <a href="https://paystack.shop/pay/ai-summer-training?amount=20000" class="btn btn-primary" style="padding: 10px 20px; font-size: 14px;">Register Now</a>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header class="hero">
+        <div id="particles-js" class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge" style="background: rgba(0, 163, 255, 0.1); border: 1px solid var(--electric-blue); color: var(--electric-blue); padding: 6px 15px; border-radius: 20px; display: inline-block; font-size: 13px; font-weight: 600; margin-bottom: 20px;">
+                        <i class="fas fa-fire" style="color: var(--bright-yellow);"></i> Limited Slots Available
+                    </div>
+                    <h1>LEVEL UP THIS<br>SUMMER WITH <span class="text-gradient">AI</span></h1>
+                    <p class="subheading">
+                        <span id="rotating-word" style="transition: opacity 0.5s;">Create</span> the Future.
+                    </p>
+                    <p class="desc">
+                        Join the next generation of creators, innovators, and tech leaders through a hands-on AI training program designed for teenagers.
+                    </p>
+                    
+                    
+                    <div class="hero-actions" style="margin-top: 30px;">
+                        <a href="https://paystack.shop/pay/ai-summer-training?amount=20000" class="btn btn-primary" style="display: flex; align-items: center; gap: 10px;">
+                            Secure Your Spot <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#curriculum" class="btn btn-outline">View Curriculum</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="{{ url_for('static', filename='images/hero_teens_ai.png') }}" alt="Teenagers using AI tools">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, rgba(0,71,255,0.2), transparent);"></div>
+                    </div>
+                    
+                    <div class="float-card fc-1">
+                        <div class="pulse-circle"></div>
+                        <div>
+                            <p style="font-size: 14px; font-weight: bold; margin: 0;">AI Generated</p>
+                            <p style="font-size: 12px; opacity: 0.7; margin: 0;">100% Success Rate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="float-card fc-2" style="background: rgba(255, 213, 0, 0.1); border-color: rgba(255, 213, 0, 0.3);">
+                        <i class="fas fa-star" style="color: var(--bright-yellow); font-size: 20px;"></i>
+                        <div>
+                            <p style="font-size: 14px; font-weight: bold; margin: 0; color: var(--bright-yellow);">Certificate</p>
+                            <p style="font-size: 12px; opacity: 0.7; margin: 0;">Included</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Trust & Social Proof Section -->
+    <section class="section" style="padding: 40px 0; background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Interested Students</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Hands-on Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Beginner Friendly</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Weeks Duration</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Why This Training Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose This <span class="text-gradient">Training?</span></h2>
+                <p>Designed specifically for Gen Z teenagers, combining hands-on learning with practical AI applications.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="glass-card feature-card">
+                    <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>No Coding Required</h3>
+                    <p>Beginner friendly. You don't need any prior programming experience to start building amazing things with AI.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Real AI Tools</h3>
+                    <p>Get hands-on experience with industry-standard AI tools like ChatGPT, Midjourney, Claude, and more.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Hands-on Projects</h3>
+                    <p>Learn by doing. Build real-world projects that you can showcase to friends, family, and future schools.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3>Mentor-Led Sessions</h3>
+                    <p>Expert guidance at every step. Ask questions and get real-time feedback from experienced tech mentors.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Creativity & Innovation</h3>
+                    <p>Unlock your creative potential. Learn how AI can assist in writing, design, and problem-solving.</p>
+                </div>
+                <div class="glass-card feature-card">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Certificate of Completion</h3>
+                    <p>Earn a verifiable certificate to add to your portfolio and boost your future career prospects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Curriculum -->
+    <section id="curriculum" class="section" style="background: rgba(0,71,255,0.02);">
+        <div class="container">
+            <div class="section-header">
+                <h2>What You Will <span class="text-gradient">Learn</span></h2>
+                <p>A comprehensive 6-week journey from AI basics to building your own intelligent projects.</p>
+            </div>
+            
+            <div class="curriculum-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 style="color: var(--electric-blue); font-size: 16px; margin-bottom: 5px;">Week 1</h3>
+                        <h4 style="font-size: 22px; margin-bottom: 10px;">Introduction to Artificial Intelligence</h4>
+                        <p style="opacity: 0.8; font-size: 15px;">Understand what Artificial Intelligence really is and how it is reshaping the world.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 style="color: var(--electric-blue); font-size: 16px; margin-bottom: 5px;">Week 2</h3>
+                        <h4 style="font-size: 22px; margin-bottom: 10px;">Python & Machine Learning Basics</h4>
+                        <p style="opacity: 0.8; font-size: 15px;">Learn the fundamentals of Python programming and how machines learn from data to improve over time.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 style="color: var(--electric-blue); font-size: 16px; margin-bottom: 5px;">Week 3</h3>
+                        <h4 style="font-size: 22px; margin-bottom: 10px;">Prompt Engineering</h4>
+                        <p style="opacity: 0.8; font-size: 15px;">Learn the art of talking to AI models to get exactly what you want.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 style="color: var(--bright-yellow); font-size: 16px; margin-bottom: 5px;">Week 4</h3>
+                        <h4 style="font-size: 22px; margin-bottom: 10px;">AI Tools for Creativity & Productivity</h4>
+                        <p style="opacity: 0.8; font-size: 15px;">Use AI to generate stunning images, write compelling stories, and automate daily tasks.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 style="color: var(--electric-blue); font-size: 16px; margin-bottom: 5px;">Week 5</h3>
+                        <h4 style="font-size: 22px; margin-bottom: 10px;">Build Mini AI Projects</h4>
+                        <p style="opacity: 0.8; font-size: 15px;">Apply everything learned to build your own custom AI projects and chatbots.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 style="color: var(--bright-yellow); font-size: 16px; margin-bottom: 5px;">Week 6</h3>
+                        <h4 style="font-size: 22px; margin-bottom: 10px;">Ethics & Future of AI</h4>
+                        <p style="opacity: 0.8; font-size: 15px;">Discuss the future of AI, ethical considerations, and how to stay ahead in a tech-driven world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Student Projects -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects You Can <span class="text-gradient">Build</span></h2>
+                <p>Get hands-on experience building practical AI tools.</p>
+            </div>
+            
+            <div class="projects-slider">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-comments" style="font-size: 60px; color: var(--electric-blue);"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Custom AI Chatbot</h3>
+                        <p style="opacity: 0.8; font-size: 14px; margin-top: 10px;">Train a personal AI assistant that knows specific facts and answers questions like an expert.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-image" style="font-size: 60px; color: #8A2BE2;"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Poster Generator</h3>
+                        <p style="opacity: 0.8; font-size: 14px; margin-top: 10px;">Use AI image generation to create stunning marketing posters and artwork without design skills.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-graduation-cap" style="font-size: 60px; color: var(--bright-yellow);"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Smart Study Assistant</h3>
+                        <p style="opacity: 0.8; font-size: 14px; margin-top: 10px;">Build a tool that summarizes long notes, creates flashcards, and helps you prepare for exams faster.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Parents Section -->
+    <section id="parents" class="section" style="background: rgba(0, 71, 255, 0.05); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div>
+                    <img src="{{ url_for('static', filename='images/parents_trust.png') }}" alt="Parent and teen" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid var(--glass-border);">
+                </div>
+                <div>
+                    <h2 style="font-size: 42px; margin-bottom: 20px;">Why Parents Trust <span class="text-gradient">This Program</span></h2>
+                    <p style="font-size: 18px; opacity: 0.8; margin-bottom: 30px;">Equip your teenager with the skills that will define the next decade of technology and innovation.</p>
+                    
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-check-circle" style="color: var(--electric-blue); font-size: 20px;"></i>
+                            <span style="font-size: 16px; font-weight: 500;">Future Career Readiness</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-check-circle" style="color: var(--electric-blue); font-size: 20px;"></i>
+                            <span style="font-size: 16px; font-weight: 500;">Productive Holiday Learning</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-check-circle" style="color: var(--electric-blue); font-size: 20px;"></i>
+                            <span style="font-size: 16px; font-weight: 500;">Safe & Guided Learning Environment</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-check-circle" style="color: var(--electric-blue); font-size: 20px;"></i>
+                            <span style="font-size: 16px; font-weight: 500;">Digital Literacy & Confidence Building</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://paystack.shop/pay/ai-summer-training?amount=20000" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Enroll Your Teenager</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Students <span class="text-gradient">Are Saying</span></h2>
+                <p>Hear from teenagers who have experienced the power of AI learning.</p>
+            </div>
+            
+            <div class="slider-wrapper" style="position: relative;">
+                <button type="button" class="slider-control prev" id="testim-prev" style="z-index: 100;"><i class="fas fa-chevron-left"></i></button>
+                <button type="button" class="slider-control next" id="testim-next" style="z-index: 100;"><i class="fas fa-chevron-right"></i></button>
+                <div class="testimonials-grid" id="testim-slider">
+                <!-- Testimonial 1 -->
+                <div class="glass-card testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p style="font-size: 16px; font-style: italic; line-height: 1.6;">"My name is Anthony Mayim Okon I had the privilege of taking a course with SMI ICT Training, and it was an excellent experience. The training was practical, well-structured, and delivered with great professionalism. I highly recommend them to anyone looking to build strong ICT skills."</p>
+                    <div class="student-info">
+                        <div class="student-avatar">AO</div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 16px;">Anthony Okon</h4>
+                            <p style="margin: 0; font-size: 13px; opacity: 0.7;">AI Summer Trainee</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="glass-card testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p style="font-size: 16px; font-style: italic; line-height: 1.6;">"The training was an eye opener, it was full of values and more than the money paid. Thank you so much SMI. God bless you."</p>
+                    <div class="student-info">
+                        <div class="student-avatar" style="background: var(--bright-yellow); color: var(--dark-navy);">OK</div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 16px;">Oluwatosin Kujembola</h4>
+                            <p style="margin: 0; font-size: 13px; opacity: 0.7;">AI Summer Trainee</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="glass-card testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p style="font-size: 15px; font-style: italic; line-height: 1.6;">"I signed up for a structured training in Advanced GEN AI & Prompt engineering course with SMI ICT Training. I'm delighted to say that the instruction, the ethical, & honest organizational disposition, imprints more to desire and with high moral panache I recommend SMI ICT Training within and out side the continent of Africa because of the Hands On experience feasible to attain and above all honesty and passion to teach."</p>
+                    <div class="student-info">
+                        <div class="student-avatar" style="background: #8A2BE2;">HA</div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 16px;">Hassan Afolabi</h4>
+                            <p style="margin: 0; font-size: 13px; opacity: 0.7;">AI Summer Trainee</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="glass-card testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p style="font-size: 16px; font-style: italic; line-height: 1.6;">"One of the best trainings i have had. Welldone to the facilitator and convener. I never wanted it to end."</p>
+                    <div class="student-info">
+                        <div class="student-avatar" style="background: #FF0055;">TO</div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 16px;">Tobiloba Olulana</h4>
+                            <p style="margin: 0; font-size: 13px; opacity: 0.7;">AI Summer Trainee</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="glass-card testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p style="font-size: 16px; font-style: italic; line-height: 1.6;">"It was an insightful training; the deep dive into Generative AI and Prompt Engineering has been incredibly enlightening."</p>
+                    <div class="student-info">
+                        <div class="student-avatar" style="background: #00FF66; color: var(--dark-navy);">SO</div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 16px;">Sayo Olawole</h4>
+                            <p style="margin: 0; font-size: 13px; opacity: 0.7;">AI Summer Trainee</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="glass-card testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p style="font-size: 16px; font-style: italic; line-height: 1.6;">"SMI ICT Training institute is a great institute to learn anything tech, graphics designing and even how to be an expert in AI. It is highly recommended."</p>
+                    <div class="student-info">
+                        <div class="student-avatar" style="background: #FF9900;">IA</div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 16px;">Inumidun Alawode</h4>
+                            <p style="margin: 0; font-size: 13px; opacity: 0.7;">AI Summer Trainee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Pricing -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent <span class="text-gradient">Pricing</span></h2>
+                <p>Secure your spot today and give your teenager the gift of future-ready skills.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Regular Price -->
+                <div class="pricing-card">
+                    <h3 style="font-size: 24px;">Regular Admission</h3>
+                    <p style="opacity: 0.7; margin-top: 10px;">Full program access</p>
+                    <div class="price">₦30,000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 4 Weeks Intensive Training</li>
+                        <li><i class="fas fa-check"></i> Hands-on AI Projects</li>
+                        <li><i class="fas fa-check"></i> Mentor-Led Sessions</li>
+                        <li><i class="fas fa-check"></i> Certificate of Completion</li>
+                    </ul>
+                    <a href="https://paystack.shop/pay/ai-summer-training?amount=30000" class="btn btn-outline" style="width: 100%; display: inline-block; text-align: center;">Enroll at ₦30,000</a>
+                </div>
+                
+                <!-- Early Bird Price -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">BEST VALUE</div>
+                    <h3 style="font-size: 24px; color: var(--bright-yellow);">Early Bird Offer</h3>
+                    <p style="opacity: 0.7; margin-top: 10px;">Register before July 18th</p>
+                    <div class="price text-gradient-yellow">₦20,000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 4 Weeks Intensive Training</li>
+                        <li><i class="fas fa-check"></i> Hands-on AI Projects</li>
+                        <li><i class="fas fa-check"></i> Mentor-Led Sessions</li>
+                        <li><i class="fas fa-check"></i> Certificate of Completion</li>
+                        <li><i class="fas fa-star"></i> Save ₦10,000 instantly</li>
+                    </ul>
+                    <a href="https://paystack.shop/pay/ai-summer-training?amount=20000" class="btn btn-yellow" style="width: 100%; animation: pulse-btn 2s infinite; display: inline-block; text-align: center;">Pay ₦20,000 Early Bird</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ Section -->
+    <section class="section" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need coding experience?</span>
+                        <i class="fas fa-plus faq-icon" style="transition: 0.3s;"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Not at all! This program is 100% beginner-friendly. We focus on how to use AI tools, logic, and creativity, rather than writing complex code.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What devices are required?</span>
+                        <i class="fas fa-plus faq-icon" style="transition: 0.3s;"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A functioning laptop (Windows or Mac) with a stable internet connection is all you need to participate effectively.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is the class online or physical?</span>
+                        <i class="fas fa-plus faq-icon" style="transition: 0.3s;"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The program is hybrid/online. Mentorship sessions are conducted online, making it accessible while still maintaining a high level of interaction.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will students receive certificates?</span>
+                        <i class="fas fa-plus faq-icon" style="transition: 0.3s;"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, upon successful completion of the training and final project, every student will receive a verifiable Certificate of Completion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>The Future Belongs to Those<br>Who <span class="text-gradient">Understand AI.</span></h2>
+            <p>Give your teen the opportunity to build future-ready skills today.</p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://paystack.shop/pay/ai-summer-training?amount=20000" class="btn btn-primary" style="font-size: 18px; padding: 18px 40px; display: inline-block;">Secure Your Spot</a>
+                <a href="https://wa.me/2347077705842" class="btn btn-outline" style="font-size: 18px; padding: 18px 40px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fab fa-whatsapp" style="color: #25d366; font-size: 24px;"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <i class="fa-solid fa-microchip"></i>
+                        AI <span>Summer</span>
+                    </div>
+                    <p>Empowering the next generation of teenagers in Nigeria with future-ready Artificial Intelligence skills.</p>
+                    <div style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="#" style="color: var(--white); opacity: 0.7; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--white); opacity: 0.7; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--white); opacity: 0.7; font-size: 20px;"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">Why This Training</a></li>
+                        <li><a href="#curriculum">Curriculum</a></li>
+                        <li><a href="#parents">For Parents</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--electric-blue); width: 20px;"></i> Lagos, Nigeria</li>
+                        <li><i class="fas fa-phone" style="color: var(--electric-blue); width: 20px;"></i> 07077705842</li>
+                        <li><i class="fas fa-envelope" style="color: var(--electric-blue); width: 20px;"></i> smiictinstitute@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                &copy; 2025 AI Summer Training. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div class="modal-overlay" id="reg-modal">
+        <div class="registration-modal">
+            <button class="close-modal">&times;</button>
+            <h3 style="font-size: 28px; margin-bottom: 10px;">Reserve My <span class="text-gradient">Spot</span></h3>
+            <p style="opacity: 0.8; margin-bottom: 30px;">Fill out the form below to register. You will be redirected to our secure Paystack portal to complete payment.</p>
+            
+            <form id="registration-form">
+                <div class="form-group">
+                    <label>Full Name (Student)</label>
+                    <input type="text" name="student_name" class="form-control" placeholder="Enter student's full name" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Parent/Guardian Name</label>
+                        <input type="text" name="parent_name" class="form-control" placeholder="Enter parent's name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Student's Age</label>
+                        <select name="age" class="form-control" required>
+                            <option value="">Select Age</option>
+                            <option value="13">13 Years</option>
+                            <option value="14">14 Years</option>
+                            <option value="15">15 Years</option>
+                            <option value="16">16 Years</option>
+                            <option value="17">17 Years</option>
+                            <option value="18">18 Years</option>
+                            <option value="19">19 Years</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" class="form-control" placeholder="Enter email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" class="form-control" placeholder="Enter phone number" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Location (City/State)</label>
+                    <input type="text" name="location" class="form-control" placeholder="e.g. Ikeja, Lagos" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Experience Level</label>
+                    <select name="experience" class="form-control" required>
+                        <option value="Beginner">Beginner (No experience)</option>
+                        <option value="Intermediate">Intermediate (Some tech knowledge)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Why do you want to join?</label>
+                    <textarea name="reason" class="form-control" rows="3" placeholder="Tell us briefly..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 18px; margin-top: 10px;">Reserve My Spot & Pay</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Notification -->
+    <div class="floating-notification" id="floating-notification">
+        <div class="notif-icon">
+            <i class="fas fa-check" style="color: var(--dark-navy);"></i>
+        </div>
+        <div class="notif-text">
+            <p id="notif-text-content">David from Lagos just enrolled</p>
+            <span id="notif-time">Just now</span>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/2347077705842" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="{{ url_for('static', filename='js/ai_training.js') }}"></script>
+    <script>
+        // Initialize Particles
+        if(window.particlesJS) {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#00A3FF" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.5, "random": true },
+                    "size": { "value": 3, "random": true },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#00A3FF",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": true,
+                        "out_mode": "out"
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": { "enable": true, "mode": "grab" },
+                        "onclick": { "enable": true, "mode": "push" },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+                        "push": { "particles_nb": 4 }
+                    }
+                },
+                "retina_detect": true
+            });
+        }
+    </script>
+</body>
+</html>
